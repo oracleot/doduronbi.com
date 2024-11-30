@@ -2,14 +2,10 @@
 
 import { Button } from "../ui/button";
 import copy from "copy-to-clipboard";
-import { SnackbarProvider, enqueueSnackbar } from "notistack";
 
 function handleCopy(text: string) {
   copy(text);
-  enqueueSnackbar("Email copied!", {
-    autoHideDuration: 2000,
-    anchorOrigin: { horizontal: "center", vertical: "bottom" },
-  });
+  alert('Email copied!');
 }
 
 export default function CopyText({ text }: { text: string }) {
@@ -25,7 +21,6 @@ export default function CopyText({ text }: { text: string }) {
           Copy
         </Button>
       </div>
-      <SnackbarProvider />
     </>
   );
 }
