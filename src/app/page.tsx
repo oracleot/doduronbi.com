@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { FileText, Github, Linkedin, Mail, Slash } from "lucide-react";
 import CopyText from "@/components/composites/CopyText";
+import { Fragment } from "react";
 
 const LINKEDIN_URL = "https://linkedin.com/in/doduronbi";
 const GITHUB_URL = "https://github.com/oracleot";
@@ -38,14 +39,14 @@ function Header() {
         </section>
         <section className="flex items-center">
           {portfolioSites.map((item, index) => (
-            <>
+            <Fragment key={index}>
               <Button asChild variant="link">
                 <Link href={item.url} target="_blank">
                   {item.title}
                 </Link>
               </Button>
               {index !== portfolioSites.length - 1 && <Slash />}
-            </>
+            </Fragment>
           ))}
         </section>
       </div>
