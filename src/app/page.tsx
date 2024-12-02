@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 import { FileText, Github, Linkedin, Mail, Slash } from "lucide-react";
-import CopyText from "@/components/composites/CopyText";
+import CopyButton from "@/components/composites/CopyButton";
 import { Fragment } from "react";
 
 const LINKEDIN_URL = "https://linkedin.com/in/doduronbi";
@@ -30,7 +30,7 @@ function Header() {
     <header className="bg-[var(--light-gray)] pt-8 px-3">
       <div className="container hidden md:flex justify-between items-center mx-auto h-[3rem] flex-wrap">
         <section className="flex gap-3">
-          <CopyText text="doduronbi@gmail.com" />
+          <CopyButton text="doduronbi@gmail.com" />
           <Button asChild className="rounded-full" size="lg">
             <Link href="mailto:doduronbi@gmail.com" target="_blank">
               <Mail /> Email
